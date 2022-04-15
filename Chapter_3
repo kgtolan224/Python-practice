@@ -17,3 +17,30 @@ def sum_divisors(n):
   # increment divisor by 1 and try again
     i+=1
   return sum 
+
+
+# The multiplication_table function prints the results of a number passed to it multiplied by 1 through 5. An additional requirement is that the result is not to exceed 25, which is done with the break statement.
+
+def multiplication_table(number):
+	# Initialize the starting point of the multiplication table
+	multiplier = 1
+	while number> 0 and multiplier <= 5:
+		result =  number*multiplier
+		if result >25:
+			break
+		print(str(number) + "x" + str(multiplier) + "=" + str(result) , end =' ')
+    # By default, the print function ends with a newline so passing whitespace to the end parameter (end=' ') indicates that the end is identified by whitespace and not a new line so we don't get a line with each result
+		# Increment the variable for the loop
+		multiplier += 1
+	print()
+  # this leaves a blank line in the out put to break up the groups of results returned for multiple input variable
+  
+
+multiplication_table(3) 
+# Should print: 3x1=3 3x2=6 3x3=9 3x4=12 3x5=15
+
+multiplication_table(5) 
+# Should print: 5x1=5 5x2=10 5x3=15 5x4=20 5x5=25
+
+multiplication_table(8)	
+# Should print: 8x1=8 8x2=16 8x3=24
